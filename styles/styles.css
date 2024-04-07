@@ -220,7 +220,7 @@ main {
   border: none;
   border-radius: 1rem;
 }
-.products-container .products .product .product__status--active {
+.products-container .products .product .product__status--available {
   color: rgba(0, 223, 67, 0.9921568627);
   background: rgba(213, 255, 225, 0.9921568627);
 }

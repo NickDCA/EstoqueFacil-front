@@ -57,7 +57,7 @@
                 border: none;
                 border-radius: 1rem;
 
-                &--active {
+                &--available {
                     color: colors.$green;
                     background: lighten($color: colors.$green, $amount: 48%);
                 }
