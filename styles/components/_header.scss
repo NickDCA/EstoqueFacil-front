@@ -1,7 +1,5 @@
-@use '../abstract/colors';
-
 header {
-    color: colors.$blue;
+    color: $blue;
     font-size: 1.75rem;
     border-bottom: 1px solid lightgray;
     padding: 1.25rem;

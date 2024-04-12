@@ -1,11 +1,7 @@
-@use '../abstract/colors';
-
 .menu-container {
     border-right: 1px solid lightgray;
     font-size: 1.2rem;
-    // flex-basis: 5%;
-    min-width: 15%;
-    // background-color: colors.$blue;
+    min-width: 12%;
 
     .menu {
         flex: 1;
@@ -28,7 +24,7 @@
                 &:hover,
                 &:focus-within,
                 &--active {
-                    color: colors.$blue;
+                    color: $blue;
                 }
 
                 p,

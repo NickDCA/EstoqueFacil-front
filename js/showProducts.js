@@ -2,28 +2,32 @@ import { api } from './api.js';
 
 const products = document.querySelector('.products');
 
-function createProduct(name, price, quantity) {
+function createProduct(id, name, price, quantity, active) {
     const product = document.createElement('li');
     product.className = 'product';
-    const status = parseInt(quantity) > 0 ? 'available' : 'out';
+    const status = active ? ['active', 'Ativo'] : ['inactive', 'Inativo'];
 
     product.innerHTML = `
-        <h3 class="product__name">${name}</h3>
+        <p class="product__id">${id}</p>
+        <p class="product__name">${name}</p>
         <p class="product__price">$${price}</p>
         <p class="product__quantity">${quantity}</p>
         <div class="status__wrapper">
-            <p class="product__status product__status--${status}">
-                ${status}
+            <p class="product__status product__status--${status[0]}">
+                ${status[1]}
             </p>
         </div>
+        <button class="product__edit"><i class="bi bi-three-dots"></i></button>
     `;
 
     return product;
 }
 
 export default async function showProducts() {
-    const productsJson = await api.getAvailableProducts();
-    productsJson.forEach((p) => {
-        products.appendChild(createProduct(p.name, p.price, p.quantity));
+    const response = await api.getProducts();
+    response.content.forEach((p) => {
+        products.appendChild(
+            createProduct(p.id, p.name, p.price, p.quantity, p.active)
+        );
     });
 }

@@ -3,7 +3,6 @@
 .products-container {
     background: lightgray;
     flex: 1;
-
     h2 {
         font-size: 1.5rem;
     }
@@ -14,30 +13,31 @@
     }
 
     .products {
-        max-height: 90%;
         display: flex;
         flex-direction: column;
         background-color: white;
         text-align: start;
+        width: 75%;
 
         .product {
             display: flex;
             padding: 0 2rem;
-            width: 100%;
             align-items: center;
             justify-content: space-evenly;
             border-bottom: 1px solid lightgray;
 
             &:first-child {
-                color: gray;
+                color: $blue;
             }
 
             &__name,
             &__price,
             &__quantity,
+            &__id,
+            &__edit,
             .status__wrapper {
                 padding: 1rem;
-                flex: 1;
+                flex-basis: calc(100% / 6);
             }
 
             .status__wrapper {
@@ -57,17 +57,19 @@
                 border: none;
                 border-radius: 1rem;
 
-                &--available {
-                    color: colors.$green;
-                    background: lighten($color: colors.$green, $amount: 48%);
+                &--active {
+                    color: $green;
+                    background: lighten($color: $green, $amount: 48%);
                 }
-                &--out {
-                    color: colors.$red;
-                    background: lighten($color: colors.$red, $amount: 35%);
+                &--inactive {
+                    color: $red;
+                    background: lighten($color: $red, $amount: 35%);
                 }
-                // &--description {
-                //     padding: 0.4rem;
-                // }
+            }
+
+            &__edit {
+                border-radius: 0.5em;
+                background-color: lightgray;
             }
         }
     }
