@@ -1,1 +1,9 @@
-/*# sourceMappingURL=styles.css.map */
+.products {
+  max-width: 90%;
+}
+.products .product__status--active {
+  color: #398712;
+}
+.products .product__status--inactive {
+  color: #d93526;
+}/*# sourceMappingURL=styles.css.map */

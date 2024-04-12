@@ -1,0 +1,13 @@
+.products {
+    max-width: 90%;
+    .product {
+        &__status {
+            &--active {
+                color: $green-pico;
+            }
+            &--inactive {
+                color: $red-pico;
+            }
+        }
+    }
+}
