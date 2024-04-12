@@ -1,60 +1,59 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="light">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <link rel="stylesheet" href="styles/styles.css" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="color-scheme" content="light dark" />
         <link
             rel="stylesheet"
-            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+            href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
         />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.colors.min.css"
+        />
+
+        <link rel="stylesheet" href="styles/styles.css" />
 
         <title>EstoqueFacil</title>
     </head>
-    <body class="container">
+    <body class="container-fluid">
         <header>
-            <h1>Estoque<span>Facil</span></h1>
+            <h2>Estoque<span class="pico-color-blue">Facil</span></h2>
         </header>
-
         <main>
-            <aside class="menu-container">
-                <nav class="menu">
-                    <ul class="menu__items">
-                        <li class="menu__item menu__item--active">
-                            <i class="bi bi-grid-fill"></i>
-                            <p>Produtos</p>
-                        </li>
-                        <li class="menu__item">
-                            <p>TODO</p>
-                        </li>
-                        <li class="menu__item">
-                            <p>TODO</p>
-                        </li>
+            <aside>
+                <nav>
+                    <ul>
+                        <li>Produtos</li>
                     </ul>
                 </nav>
             </aside>
-
-            <div class="products-container">
-                <h2>Produtos</h2>
-
-                <!-- Aqui ficam os produtos -->
-                <ul class="products">
-                    <li class="product">
-                        <p class="product__name">Nome</p>
-                        <p class="product__price">Preço</p>
-                        <p class="product__quantity">Quantidade</p>
-                        <div class="status__wrapper" id="description">
-                            <p
-                                class="product__status product__status--description"
-                            >
-                                Disponibilidade
-                            </p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
+            <section>
+                <h3>Produtos</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th scope="col">ID</th>
+                            <th scope="col">NAME</th>
+                            <th scope="col">QNT</th>
+                            <th scope="col">PRICE</th>
+                            <th scope="col">STATUS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">79</th>
+                            <td>Laptop</td>
+                            <td>89</td>
+                            <td>999,99</td>
+                            <td class="pico-color-green">ACTIVE</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
         </main>
-        <script type="module" src="./js/index.js"></script>
+        <footer></footer>
+        <!-- <script type="module" src="./js/index.js"></script> -->
     </body>
 </html>
